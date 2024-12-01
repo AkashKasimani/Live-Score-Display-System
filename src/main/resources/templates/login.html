@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="regform">
+        <h3>Sign Up</h3> 
+        <form action="" th:action="@{/login}" method="post">
+        <div class="name">
+            <input type="email" id="email" name="email" placeholder="Email" required="required">
+        </div>
+        <div class="name">
+            <input type="password" id="password" name="password" placeholder="password" required="required">
+        </div>
+        
+        <div class="button">
+            <button type="submit">Login</button>
+           
+        </div>
+        </form>
+    </div>
+    <div class="styles">
+    <style>body{
+        background-image: url("/images/pexels-pixabay-262524.jpg");
+        background-size: cover;
+        background-repeat:no-repeat;
+    }
+    .regform{
+        width:300px;
+        margin: 180px auto;
+        padding:10px 20px 30px;
+        background-color: rgba(239, 239, 239, 0.5);
+        color: black;
+        font-size: 20px;
+        border-radius: 6px;
+    }
+    .regform h3{
+        text-align: center;
+        color: navy;
+    }
+    .regform .aaa{
+        display: block;
+    }
+    .name input{
+        width:100%;
+        font-size: 1em;
+        border: 1px solid lightgreen;
+        box-shadow: 2px;
+        border-radius: 8px;
+        padding: 10px 10px;
+        box-sizing:border-box;
+        margin:5px 0px 15px;
+    }
+    input:focus{
+        background-color: aquamarine;
+        
+    }
+    .button{
+        text-align: right;
+    }
+    button{
+        background-color:rgb(53, 186, 53) ;
+        font-size: 15px;
+        margin-top: 10px;
+        padding: 13px ;
+        border-radius: 8px;
+        border: 1px solid lightseagreen;
+        box-shadow: 2px;
+    }
+    .radio input{
+        accent-color: rgb(60, 51, 187);
+        transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        
+    }  
+    .button:hover{
+        transform: rotate(360deg);}
+    </style>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style3.css">
+<title>Onlygames.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Only<span>Games</span>.com<button type="button" style="font-size: 13px; float: right; border-radius: 8px;  background-color: #ffffff;"><a href="/login"><strong>Log Out</strong></a></button>
+        </button></h1>
+      </div>
+</header>
+<nav>
+  <a href="/match/live">Live</a>
+  <a href="#teamheading">Teams & Players</a>
+  <a href="#matchheading">Schedules</a>
+  <a href="#aboutheading"><i class="fa-solid"></i>About Us</a>
+  <a href="#contactheading"><i class="fa-solid"></i>Contact</a>
+</nav>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:url("/images/pexels-jhonny-salas-brochero-9634903.jpg") ;
+    background-size: cover;
+    background-repeat:no-repeat;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav {
+    background-color: #ff6f61;
+    padding: 10px ;
+    text-align: center;
+  }
+
+  nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    
+  }
+
+  nav a:hover {
+    background-color: #ddd;
+  }
+  .logo {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo h1 {
+    font-size: 36px;
+    color: #f9f3f3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .logo span {
+    color: #ff6f61;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    height: fit-content;
+  }
+  
+  .contact-details {
+    font-size: 14px;
+  }
+  .about-info{
+    width:fit-content;
+    padding: 0.5em;
+  }
+  .table-container {
+    float: left;
+    width: 25%; /* Adjust width as needed */
+    padding: 0 10px; /* Add some spacing between tables */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+
+  .container {
+    max-width: 800px;
+   
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(239,239,239,0.6);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  h1,h2{
+    text-align: center;
+    color: #333;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+      
+    background-color: #f2f2f2;
+    
+    color: #373737;
+  }
+  tr:hover {
+    background-color: #f2f2f2;
+    
+  }
+  .container h3{
+    text-align: center;
+  }
+  button{
+   
+    color: rgb(0, 0, 0);
+    padding: 8px 7px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    
+  }
+  li{
+    text-align: left;
+  }
+  h3{
+    background-color: #fff;
+    
+    
+  }
+  button{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+     transition: transform .7s ease-in-out;
+    margin-left:10px;
+  }
+  
+  button:hover{
+    transform: rotate(360deg);}
+    img{
+      width: 450px;
+      height: 250px;
+      transition: transform .2s ease-in-out;
+    }     
+    img:hover{
+      transform: scale(1.1);
+    }
+    .parent {
+      text-align: left;
+    }
+    .child {
+      display: inline-block;
+      vertical-align: top;
+      margin: 2%;
+    }
+
+  ul{
+    transition: transform .2s ease-in;
+  }
+ul:hover{
+  transform: scale(1.3);
+}
+p{
+  transition: ease-out;
+}
+p:hover{
+  transform: scale(1.3);
+}
+.go-top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border: 3px solid #333;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #f66f61
+}
+
+.go-top-btn img {
+  width: 25px;
+  height: 25px;
+}
+</style>
+
+</body>
+<button class="go-top-btn">
+      <img src="/images/arrow-up.png" alt="arrow up">
+    </button>
+    
+    <script>
+    const goTopBtn = document.querySelector('.go-top-btn');
+
+    window.addEventListener('scroll', checkHeight)
+
+    function checkHeight(){
+      if(window.scrollY > 200) {
+        goTopBtn.style.display = "flex"
+      } else {
+        goTopBtn.style.display = "none"
+      }
+    }
+
+    goTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    })
+    
+    </script>
+<div class="index">
+  <div class="container">
+    <h2>HI THERE !<span style="color: #ff6f61;" > WELCOME</span></h2>
+</div>
+<div class="container">
+  <h2>Watch Now</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <a href="https://www.jiocinema.com/sports"><img src="/images/cricket.webp" alt="Los Angeles" style="width:100%;"></a>
+      </div>	
+
+      <!-- <div class="item">
+        <a href="https://www.jiocinema.com/sports/indian-super-league/3822823"><img src="/images/football.webp" alt="Chicago" style="width:100%;"></a>
+      </div>
+    
+      <div class="item">
+        <a href="https://www.sonyliv.com/sports/volleyball-rupay-prime-volleyball-league-2023-1500003795"><img src="/images/volleyball.jpg" alt="New york" style="width:100%;"></a>
+      </div> -->
+    </div> 
+
+    <!-- Left and right controls -->
+    <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a> -->
+  </div>
+</div>
+
+<h6 id="teamheading"></h6>
+<section class="teams">
+  <div class="tables">
+    <h2><span style="color: #ff6f61;">Teams &</span> Players</h2>
+  <li><h4>
+    <div class="container" style="width: fit-content;">
+
+    <li><a href="/players"><img src="/images/cricket.jpg" alt="buttonpng" /></a></li>
+  <!-- <li><a href="/players2"><img src="/images/football.jpg" alt="buttonpng" border="0" /></a></li>
+  <li><a href="/player3"><img src="/images/voll.jpg" alt="buttonpng" border="0" /></a></li> -->
+  <!-- <li><a href="players4.html"><img src="/images/bb.jpg" alt="buttonpng" border="0" /></a></li>
+  <li><a href="players5.html"><img src="/images/batm.jpg" alt="buttonpng" border="0" /></a></li> -->
+</div>
+</h4>
+  </li>
+  </div>
+</section>
+<h6 id ="matchheading"></h6>
+<section class="matches">
+  <div class="tables">
+    <h2><span style="color: #ff6f61;">Sche</span>dules</h2>
+      <title>Match Fixtures</title>
+    <div class="container" style=" height: 400px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Add vertical scroll if content overflows */
+    border: 1px solid #ccc;">
+      <h3>Cricket <span style="color:#ff6f61 ;">Matches</span></h3>
+      <table style="width: 100%; border-collapse: collapse;">
+        
+        <tr>
+          <th>MATCH NO</th>
+          <th>MATCH DAY</th>
+          <th>DATE</th>
+          <th>DAY</th>
+          <th>TIME</th>
+          <th>HOME</th>
+          <th>AWAY</th>
+          <th>STADIUM</th>
+        </tr>
+        <!-- Data rows here -->
+        <tr>
+          <td>27</td>
+          <td>23</td>
+          <td>13-Apr-24</td>
+          <td>Sat</td>
+          <td>7:30PM</td>
+          <td>Punjab Kings</td>
+          <td>Rajasthan Royals</td>
+          <td>Mullanpur</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>24</td>
+          <td>14-Apr-24</td>
+          <td>Sun</td>
+          <td>3:30PM</td>
+          <td>Kolkata Knight Riders</td>
+          <td>Lucknow Super Giants</td>
+          <td>Kolkata</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>24</td>
+          <td>14-Apr-24</td>
+          <td>Sun</td>
+          <td>7:30PM</td>
+          <td>Mumbai Indians</td>
+          <td>Chennai Super Kings</td>
+          <td>Mumbai</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>25</td>
+          <td>15-Apr-24</td>
+          <td>Mon</td>
+          <td>7:30PM</td>
+          <td>Royal Challengers Bengaluru</td>
+          <td>Sunrisers Hyderabad</td>
+          <td>Bengaluru</td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>26</td>
+          <td>16-Apr-24</td>
+          <td>Tue</td>
+          <td>7:30PM</td>
+          <td>Gujarat Titans</td>
+          <td>Delhi Capitals</td>
+          <td>Ahmedabad</td>
+        </tr>
+        <tr>
+          <td>32</td>
+          <td>27</td>
+          <td>17-Apr-24</td>
+          <td>Wed</td>
+          <td>7:30PM</td>
+          <td>Kolkata Knight Riders</td>
+          <td>Rajasthan Royals</td>
+          <td>Kolkata</td>
+        </tr>
+        <tr>
+          <td>33</td>
+          <td>28</td>
+          <td>18-Apr-24</td>
+          <td>Thu</td>
+          <td>7:30PM</td>
+          <td>Punjab Kings</td>
+          <td>Mumbai Indians</td>
+          <td>Mullanpur</td>
+        </tr>
+        <tr>
+          <td>34</td>
+          <td>29</td>
+          <td>19-Apr-24</td>
+          <td>Fri</td>
+          <td>7:30PM</td>
+          <td>Lucknow Super Giants</td>
+          <td>Chennai Super Kings</td>
+          <td>Lucknow</td>
+        </tr>
+        <tr>
+          <td>35</td>
+          <td>30</td>
+          <td>20-Apr-24</td>
+          <td>Sat</td>
+          <td>7:30PM</td>
+          <td>Delhi Capitals</td>
+          <td>Sunrisers Hyderabad</td>
+          <td>Delhi</td>
+          
+        </tr>
+        <tr>
+          <td>36</td>
+          <td>31</td>
+          <td>21-Apr-24</td>
+          <td>Sun</td>
+          <td>3:30PM</td>
+          <td>Kolkata Knight Riders</td>
+          <td>Royal Challengers Bengaluru</td>
+          <td>Kolkata</td>
+        </tr>
+        <tr>
+          <td>37</td>
+          <td>31</td>
+          <td>21-Apr-24</td>
+          <td>Sun</td>
+          <td>7:30PM</td>
+          <td>Punjab Kings</td>
+          <td>Gujarat Titans</td>
+          <td>Mullanpur</td>
+        </tr>
+        <tr>
+          <td>38</td>
+          <td>32</td>
+          <td>22-Apr-24</td>
+          <td>Mon</td>
+          <td>7:30PM</td>
+          <td>Rajasthan Royals</td>
+          <td>Mumbai Indians</td>
+          <td>Jaipur</td>
+        </tr>
+        <tr>
+          <td>39</td>
+          <td>33</td>
+          <td>23-Apr-24</td>
+          <td>Tue</td>
+          <td>7:30PM</td>
+          <td>Chennai Super Kings</td>
+          <td>Lucknow Super Giants</td>
+          <td>Chennai</td>
+        </tr>
+        <tr>
+          <td>40</td>
+          <td>34</td>
+          <td>24-Apr-24</td>
+          <td>Wed</td>
+          <td>7:30PM</td>
+          <td>Delhi Capitals</td>
+          <td>Gujarat Titans</td>
+          <td>Delhi</td>
+        </tr>
+        <tr>
+          <td>41</td>
+          <td>35</td>
+          <td>25-Apr-24</td>
+          <td>Thu</td>
+          <td>7:30PM</td>
+          <td>Sunrisers Hyderabad</td>
+          <td>Royal Challengers Bengaluru</td>
+          <td>Hyderabad</td>
+        </tr>
+        <tr>
+          <td>42</td>
+          <td>36</td>
+          <td>26-Apr-24</td>
+          <td>Fri</td>
+          <td>7:30PM</td>
+          <td>Kolkata Knight Riders</td>
+          <td>Punjab Kings</td>
+          <td>Kolkata</td>
+        </tr>
+        <tr>
+          <td>43</td>
+          <td>37</td>
+          <td>27-Apr-24</td>
+          <td>Sat</td>
+          <td>3:30PM</td>
+          <td>Delhi Capitals</td>
+          <td>Mumbai Indians</td>
+          <td>Delhi</td>
+        </tr>
+        <tr>
+          <td>44</td>
+          <td>37</td>
+          <td>27-Apr-24</td>
+          <td>Sat</td>
+          <td>7:30PM</td>
+          <td>Lucknow Super Giants</td>
+          <td>Rajasthan Royals</td>
+          <td>Lucknow</td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>38</td>
+          <td>28-Apr-24</td>
+          <td>Sun</td>
+          <td>3:30PM</td>
+          <td>Gujarat Titans</td>
+          <td>Royal Challengers Bengaluru</td>
+          <td>Ahmedabad</td>
+        </tr>
+        <tr>
+          <td>46</td>
+          <td>38</td>
+          <td>28-Apr-24</td>
+          <td>Sun</td>
+          <td>7:30PM</td>
+          <td>Chennai Super Kings</td>
+          <td>Sunrisers Hyderabad</td>
+          <td>Chennai</td>
+        </tr>
+        <tr>
+          <td>47</td>
+          <td>39</td>
+          <td>29-Apr-24</td>
+          <td>Mon</td>
+          <td>7:30PM</td>
+          <td>Kolkata Knight Riders</td>
+          <td>Delhi Capitals</td>
+          <td>Kolkata</td>
+        </tr>
+        <tr>
+          <td>48</td>
+          <td>40</td>
+          <td>30-Apr-24</td>
+          <td>Tue</td>
+          <td>7:30PM</td>
+          <td>Lucknow Super Giants</td>
+          <td>Mumbai Indians</td>
+          <td>Lucknow</td>
+        </tr>
+        <tr>
+          <td>49</td>
+          <td>41</td>
+          <td>01-May-24</td>
+          <td>Wed</td>
+          <td>7:30PM</td>
+          <td>Chennai Super Kings</td>
+          <td>Punjab Kings</td>
+          <td>Chennai</td>
+        </tr>
+        <tr>
+          <td>50</td>
+          <td>42</td>
+          <td>02-May-24</td>
+          <td>Thu</td>
+          <td>7:30PM</td>
+          <td>Sunrisers Hyderabad</td>
+          <td>Rajasthan Royals</td>
+          <td>Hyderabad</td>
+        </tr>
+        <tr>
+          <td>51</td>
+          <td>43</td>
+          <td>03-May-24</td>
+          <td>Fri</td>
+          <td>7:30PM</td>
+          <td>Mumbai Indians</td>
+          <td>Kolkata Knight Riders</td>
+          <td>Mumbai</td>
+        </tr>
+        <tr>
+          <td>52</td>
+          <td>44</td>
+          <td>04-May-24</td>
+          <td>Sat</td>
+          <td>7:30PM</td>
+          <td>Royal Challengers Bengaluru</td>
+          <td>Gujarat Titans</td>
+          <td>Bengaluru</td>
+        </tr>
+        <tr>
+          <td>53</td>
+          <td>45</td>
+          <td>05-May-24</td>
+          <td>Sun</td>
+          <td>3:30PM</td>
+          <td>Punjab Kings</td>
+          <td>Chennai Super Kings</td>
+          <td>Dharamshala</td>
+        </tr>
+        <tr>
+          <td>54</td>
+          <td>45</td>
+          <td>05-May-24</td>
+          <td>Sun</td>
+          <td>7:30PM</td>
+          <td>Lucknow Super Giants</td>
+          <td>Kolkata Knight Riders</td>
+          <td>Lucknow</td>
+        </tr>
+        <tr>
+          <td>55</td>
+          <td>46</td>
+          <td>06-May-24</td>
+          <td>Mon</td>
+          <td>7:30PM</td>
+          <td>Mumbai Indians</td>
+          <td>Sunrisers Hyderabad</td>
+          <td>Mumbai</td>
+        </tr>
+        <td>56</td>
+    <td>47</td>
+    <td>07-May-24</td>
+    <td>Tue</td>
+    <td>7:30PM</td>
+    <td>Delhi Capitals</td>
+    <td>Rajasthan Royals</td>
+    <td>Delhi</td>
+  </tr>
+  <tr>
+    <td>57</td>
+    <td>48</td>
+    <td>08-May-24</td>
+    <td>Wed</td>
+    <td>7:30PM</td>
+    <td>Sunrisers Hyderabad</td>
+    <td>Lucknow Super Giants</td>
+    <td>Hyderabad</td>
+  </tr>
+  <tr>
+    <td>58</td>
+    <td>49</td>
+    <td>09-May-24</td>
+    <td>Thu</td>
+    <td>7:30PM</td>
+    <td>Punjab Kings</td>
+    <td>Royal Challengers Bengaluru</td>
+    <td>Dharamshala</td>
+  </tr>
+  <tr>
+    <td>59</td>
+    <td>50</td>
+    <td>10-May-24</td>
+    <td>Fri</td>
+    <td>7:30PM</td>
+    <td>Gujarat Titans</td>
+    <td>Chennai Super Kings</td>
+    <td>Ahmedabad</td>
+  </tr>
+  <tr>
+    <td>60</td>
+    <td>51</td>
+    <td>11-May-24</td>
+    <td>Sat</td>
+    <td>7:30PM</td>
+    <td>Kolkata Knight Riders</td>
+    <td>Mumbai Indians</td>
+    <td>Kolkata</td>
+  </tr>
+  <tr>
+    <td>61</td>
+    <td>52</td>
+    <td>12-May-24</td>
+    <td>Sun</td>
+    <td>3:30PM</td>
+    <td>Chennai Super Kings</td>
+    <td>Rajasthan Royals</td>
+    <td>Chennai</td>
+  </tr>
+  <tr>
+    <td>62</td>
+    <td>52</td>
+    <td>12-May-24</td>
+    <td>Sun</td>
+    <td>7:30PM</td>
+    <td>Royal Challengers Bengaluru</td>
+    <td>Delhi Capitals</td>
+    <td>Bengaluru</td>
+  </tr>
+  <tr>
+    <td>63</td>
+    <td>53</td>
+    <td>13-May-24</td>
+    <td>Mon</td>
+    <td>7:30PM</td>
+    <td>Gujarat Titans</td>
+    <td>Kolkata Knight Riders</td>
+    <td>Ahmedabad</td>
+  </tr>
+  <tr>
+    <td>64</td>
+    <td>54</td>
+    <td>14-May-24</td>
+    <td>Tue</td>
+    <td>7:30PM</td>
+    <td>Delhi Capitals</td>
+    <td>Lucknow Super Giants</td>
+    <td>Delhi</td>
+  </tr>
+  <tr>
+    <td>65</td>
+    <td>55</td>
+    <td>15-May-24</td>
+    <td>Wed</td>
+    <td>7:30PM</td>
+    <td>Rajasthan Royals</td>
+    <td>Punjab Kings</td>
+    <td>Guwahati</td>
+  </tr>
+  <tr>
+    <td>66</td>
+    <td>56</td>
+    <td>16-May-24</td>
+    <td>Thu</td>
+    <td>7:30PM</td>
+    <td>Sunrisers Hyderabad</td>
+    <td>Gujarat Titans</td>
+    <td>Hyderabad</td>
+  </tr>
+  <tr>
+    <td>67</td>
+    <td>57</td>
+    <td>17-May-24</td>
+    <td>Fri</td>
+    <td>7:30PM</td>
+    <td>Mumbai Indians</td>
+    <td>Lucknow Super Giants</td>
+    <td>Mumbai</td>
+  </tr>
+  <tr>
+    <td>68</td>
+    <td>58</td>
+    <td>18-May-24</td>
+    <td>Sat</td>
+    <td>7:30PM</td>
+    <td>Royal Challengers Bengaluru</td>
+    <td>Chennai Super Kings</td>
+    <td>Bengaluru</td>
+  </tr>
+  <tr>
+    <td>69</td>
+    <td>59</td>
+    <td>19-May-24</td>
+    <td>Sun</td>
+    <td>3:30PM</td>
+    <td>Sunrisers Hyderabad</td>
+    <td>Punjab Kings</td>
+    <td>Hyderabad</td>
+  </tr>
+  <tr>
+    <td>70</td>
+    <td>59</td>
+    <td>19-May-24</td>
+    <td>Sun</td>
+    <td>7:30PM</td>
+    <td>Rajasthan Royals</td>
+    <td>Kolkata Knight Riders</td>
+    <td>Guwahati</td>
+  </tr>
+  <tr>
+    <td>71</td>
+    <td>61</td>
+    <td>21-May-24</td>
+    <td>Tue</td>
+    <td>7:30PM</td>
+    <td>Qualifier 1</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>72</td>
+    <td>62</td>
+    <td>22-May-24</td>
+    <td>Wed</td>
+    <td>7:30PM</td>
+    <td>Eliminator</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>73</td>
+    <td>64</td>
+    <td>24-May-24</td>
+    <td>Fri</td>
+    <td>7:30PM</td>
+    <td>Qualifier 2</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>74</td>
+    <td>66</td>
+    <td>26-May-24</td>
+    <td>Sun</td>
+    <td>7:30PM</td>
+    <td>FINAL</td>
+    <td>Chennai</td>
+    <td></td>
+  </tr>
+      </table>
+    </div>
+
+    <!-- <div class="container" style=" height: 400px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Add vertical scroll if content overflows */
+    border: 1px solid #ccc;">
+      <h3>Football<span style="color: #ff6f61;" >Matches</span></h3>
+      <table style="border-collapse: collapse;">
+        <tr>
+          <th>Date</th>
+          <th>Tournament</th>
+        </tr>
+        <tr>
+          <td>July 15-July 31</td>
+          <td>Junior Boys National Football Championship Tier 1 and Tier 2</td>
+        </tr>
+        <tr>
+          <td>July 15-July 31</td>
+          <td>Junior Girls National Football Championship Tier 1 and Tier 2</td>
+        </tr>
+        <tr>
+          <td>July 26-August 31</td>
+          <td>Durand Cup</td>
+        </tr>
+        <tr>
+          <td>August 1-September 30</td>
+          <td>I-League 3</td>
+        </tr>
+        <tr>
+          <td>August 5-August 31</td>
+          <td>Sub-Junior Boys National Football Championship Tier 1 and Tier 2</td>
+        </tr>
+        <tr>
+          <td>August 5-August 31</td>
+          <td>Sub-Junior Girls National Football Championship Tier 1 and Tier 2</td>
+        </tr>
+        <tr>
+          <td>September 1-May 31</td>
+          <td>AIFF Youth Leagues (U13/U15/U17)</td>
+        </tr>
+        <tr>
+          <td>September 1-September 15</td>
+          <td>29th Senior Women's National Football Championship Group Stage</td>
+        </tr>
+        <tr>
+          <td>September 14-April 30</td>
+          <td>Indian Super League</td>
+        </tr>
+        <tr>
+          <td>October 1-May 15</td>
+          <td>Super Cup</td>
+        </tr>
+        <tr>
+          <td>August 1-September 30</td>
+          <td>I-League 3</td>
+        </tr>
+        <tr>
+          <td>August 5-August 31</td>
+          <td>Sub-Junior Boys National Football Championship Tier 1 and Tier 2</td>
+        </tr>
+        <tr>
+          <td>August 5-August 31</td>
+          <td>Sub-Junior Girls National Football Championship Tier 1 and Tier 2</td>
+        </tr>
+        <tr>
+          <td>September 1-May 31</td>
+          <td>AIFF Youth Leagues (U13/U15/U17)</td>
+        </tr>
+        <tr>
+          <td>September 1-September 15</td>
+          <td>29th Senior Women's National Football Championship Group Stage</td>
+        </tr>
+        <tr>
+          <td>September 14-April 30</td>
+          <td>Indian Super League</td>
+        </tr>
+        <tr>
+          <td>October 1-October 15</td>
+          <td>29th Senior Women's National Football Championship Final Round</td>
+        </tr>
+        <tr>
+          <td>October 19-April 30</td>
+          <td>I-League</td>
+        </tr>
+        <tr>
+          <td>October 25-April 30</td>
+          <td>Indian Women's League</td>
+        </tr>
+        <tr>
+          <td>November 5-November 15</td>
+          <td>78th National Football Championship for the Santosh Trophy Group Stage</td>
+        </tr>
+        <tr>
+          <td>December 1-December 15</td>
+          <td>78th National Football Championship for the Santosh Trophy Final Round</td>
+        </tr>
+        <tr>
+          <td>January 15, 2025-April 30, 2025</td>
+          <td>I-League 2</td>
+        </tr>
+        <tr>
+          <td>January 25, 2025-April 30, 2025</td>
+          <td>Indian Women's League 2</td>
+        </tr>
+        <tr>
+          <td>February 1, 2025-February 20, 2025</td>
+          <td>National Beach Soccer Championship</td>
+        </tr>
+        <tr>
+          <td>May 1, 2025-May 20, 2025</td>
+          <td>AIFF Men's Futsal Club Championship</td>
+        </tr>
+      </table>
+      
+    </div> -->
+  
+    <!-- <div class="container" style=" height: 400px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Add vertical scroll if content overflows */
+    border: 1px solid #ccc;">
+      <h3>Volleyball<span style="color: #ff6f61;"> Matches</span></h3>
+      <table style="border-collapse: collapse;">
+        <tr>
+          <th>Date</th>
+          <th>Match</th>
+          <th>Time</th>
+        </tr>
+        <tr>
+          <td>March 1, Friday</td>
+          <td>Delhi Toofans vs Chennai Blitz</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 1, Friday</td>
+          <td>Mumbai Meteors vs Ahmedabad Defenders</td>
+          <td>8:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 2, Saturday</td>
+          <td>Hyderabad Black Hawks vs Calicut Heroes</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 3, Sunday</td>
+          <td>Kolkata Thunderbolts vs Delhi Toofans</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 3, Sunday</td>
+          <td>Ahmedabad Defenders vs Kochi Blue Spikers</td>
+          <td>8:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 4, Monday</td>
+          <td>Hyderabad Black Hawks vs Bengaluru Torpedoes</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 4, Monday</td>
+          <td>Mumbai Meteors vs Chennai Blitz</td>
+          <td>8:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 5, Tuesday</td>
+          <td>Kochi Blue Spikers vs Delhi Toofans</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 6, Wednesday</td>
+          <td>Bengaluru Torpedoes vs Calicut Heroes</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 7, Thursday</td>
+          <td>Kolkata Thunderbolts vs Mumbai Meteors</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 8, Friday</td>
+          <td>Bengaluru Torpedoes vs Chennai Blitz</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 8, Friday</td>
+          <td>Ahmedabad Defenders vs Calicut Heroes</td>
+          <td>8:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 9, Saturday</td>
+          <td>Hyderabad Black Hawks vs Kochi Blue Spikers</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 10, Sunday</td>
+          <td>Chennai Blitz vs Calicut Heroes</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 10, Sunday</td>
+          <td>Ahmedabad Defenders vs Delhi Toofans</td>
+          <td>8:30 PM</td>
+        </tr>
+        <tr>
+          <th>Date</th>
+          <th>Match</th>
+          <th>Time</th>
+        </tr>
+<tr>
+          <td>March 11, Monday</td>
+          <td>Team 1st vs Team 2nd</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 12, Tuesday</td>
+          <td>Team 3rd vs Team 4th</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 13, Wednesday</td>
+          <td>Team 1st vs Team 5th</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 14, Thursday</td>
+          <td>Team 3rd vs Team 2nd</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 15, Friday</td>
+          <td>Team 1st vs Team 4th</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 16, Saturday</td>
+          <td>Team 5th vs Team 2nd</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 17, Sunday</td>
+          <td>Team 1st vs Team 3rd</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 17, Sunday</td>
+          <td>Team 4th vs Team 5th</td>
+          <td>8:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 18, Monday</td>
+          <td>Team 5th vs Team 3rd</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 18, Monday</td>
+          <td>Team 4th vs Team 2nd</td>
+          <td>8:30 PM</td>
+        </tr>
+                <tr>
+          <td>March 19, Tuesday</td>
+          <td>Team 2nd (After Super 5s) vs Team 3rd (After Super 5s)</td>
+          <td>6:30 PM</td>
+        </tr>
+        <tr>
+          <td>March 21, Thursday</td>
+          <td>Team 1st (After Super 5s) vs Winner of Eliminator</td>
+          <td>6:30 PM</td>
+        </tr>
+      </table>
+    </div>
+  </div> -->
+</section>
+
+<h5 id="aboutheading"></h5>
+<section class="about">
+<div class="container" style="width: max-content;">
+  <div class="about-info">
+    <h4><strong>
+      <h2 >About Us!</h2> </strong>
+      <h3 style="text-align: center;">Welcome To ONLY<span style="color: #ff6f61;">GAMES</span>.COM</h3>
+      <h4><id="Name2"><strong>ONLY<span style="color:#ff6f61">GAMES</strong></span> is a Professional entertainment information 
+      Platform. Here we will provide you only interesting content, which you will like very much. We're dedicated to providing you
+      the best of entertainment information, with a focus on dependability and users can know their favorite team's score on a match.
+      We're working to turn our passion for entertainment information into a booming online website. We hope you enjoy our entertainment 
+      information as much as we enjoy offering them to you.</h4>
+  <h4>I will keep posting more important posts on my Website for all of you. Please give your support and love.</h4>
+  <h4 style="font-weight: bold; text-align: center;">Thanks For Visiting Our Site<br><br>
+  <span style="color: rgb(30, 30, 134); font-size: 16px; font-weight: bold; text-align: center;">Have a nice day!</span></h4>
+</div>
+  </div>
+</section>
+</div>
+<footer>
+  <h6 id="contactheading"></h6>
+  <div class="parent">
+    <div class="child">
+
+      <h4><span style="text-align: left; color: #ffffff;">Contact Us</span></h4>
+   
+      <h4><strong>Email:</strong><a href= "https://mail.google.com/mail/?view=cm&fs=1&to=akashk26062003@gmail.com" style="background-color: #ffffff; width: fit-content;">akashk26062003@gmail.com</a></h4>
+      <h4><strong>Phone:</strong>+91 9994651382 , +91 9489020461</h4>
+      <h4><strong>Address:</strong> PP9P+GRW, Palayamkottai, Tirunelveli, Tamil Nadu 627002</h4>
+    </div>
+  
+    <div class="child">
+    <h4><span style="color: #ffffff;">Follow Us on</span></h4>
+    <p style="background-color: #ffffff; width: fit-content;"> <a href="https://www.instagram.com/useless_diamond_/">Instagram</a></p>
+    <p style="background-color: #ffffff; width: fit-content;"><a href="https://www.facebook.com/kasimanikandan.kasimanikandan?mibextid=ZbWKwL">Facebook</a></p>
+  </div>
+  <div class="child">
+          <h4 style="color: #ffffff; vertical-align: top;">We'd Love Your Feedback!</h4>
+          
+        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=akashk26062003@gmail.com" style="display: inline-block; background-color: #fff;">Write a Review</a> </p>
+          <h4 style="color: #ffffff;">Best Regards,<br> The Only<span style="color: #ff6f61;">Games</span> Team</h4>
+  </div>
+  </div>
+</footer>
+</html>
